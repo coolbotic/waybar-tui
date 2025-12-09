@@ -12,6 +12,39 @@ type WaybarOutput struct {
 	Markup  string `json:"markup"`
 }
 
+type WeatherInfo struct {
+	Emoji       string
+	Description string
+}
+
+var WeatherMap = map[int]WeatherInfo{
+	0:  {"☀️", "Clear sky"},
+	1:  {"🌤️", "Mainly clear"},
+	2:  {"⛅", "Partly cloudy"},
+	3:  {"☁️", "Overcast"},
+	4:  {"☀️", "Clear sky"},
+	5:  {"☀️", "Clear sky"},
+	45: {"🌫️", "Fog"},
+	48: {"🌫️", "Depositing rime fog"},
+	51: {"🌦️", "light drizzle"},
+	53: {"🌦️", "moderate drizzle"},
+	55: {"🌦️", "dense drizzle"},
+	61: {"🌧️", "slight rain"},
+	63: {"🌧️", "moderate rain"},
+	65: {"🌧️", "heavy rain"},
+	66: {"🌧️", "light freezing rain"},
+	67: {"🌧️", "heavy freezing rain"},
+	71: {"❄️", "slight snow"},
+	73: {"❄️", "moderate snow"},
+	75: {"❄️", "heavy snow"},
+	80: {"🌦️", "slight rain showers"},
+	81: {"🌧️", "moderate rain showers"},
+	82: {"🌧️", "violent rain showers"},
+	95: {"⛈️", "Thunderstorm"},
+	96: {"⛈️", "Thunderstorm with hail (slight)"},
+	99: {"⛈️", "Thunderstorm with hail (severe)"},
+}
+
 const (
 	fgHeader = "#f4b8e4"
 )
