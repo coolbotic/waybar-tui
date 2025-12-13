@@ -25,4 +25,4 @@ test-local: build
 		--background='#1e1e2e' \
 		--font="JetBrainsMono Nerd Font 9" \
 		--margin=20 \
-		-t "$$(./waybar-tui | jq -r '.tooltip')"
+		-t "$$(./waybar-tui weather | jq -r '.tooltip')"
